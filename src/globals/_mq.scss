@@ -1,0 +1,19 @@
+/*
+ * メディアクエリ用mixin
+ */
+@use "functions" as *;
+
+$breakpoints: (
+    // 540px以上(スマホの横向き)のモニタで適用
+    "540": "screen and (min-width: #{to-em(540px, 16px)})",
+    // 768px以上のタブレットやモニタで適用
+    "768": "screen and (min-width: #{to-em(768px, 16px)})",
+    // 1200px以上のタブレットやモニタで適用
+    "1200": "screen and (min-width: #{to-em(1200px, 16px)})"
+) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}

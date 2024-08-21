@@ -1,12 +1,17 @@
+import { Header } from "./components/header/Header";
+import { Nav } from "./components/nav/Nav";
+import { Discover } from "./components/discover/Discover";
+import { Footer } from "./components/footer/Footer";
+
 import "./App.scss";
 
 function App() {
     return (
         <>
-            <div>
-                <h1>Hello World!</h1>
-                <p>description.</p>
-            </div>
+            <Nav />
+            <Header />
+            <Discover />
+            {/* <Footer /> */}
         </>
     );
 }

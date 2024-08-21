@@ -1,0 +1,158 @@
+@use "../../globals/" as *;
+
+:root {
+    --primary-color: #2887ff;
+    --primary-color-dark: #2476da;
+    --text-dark: #0a0a0a;
+    --text-light: #737373;
+    --extra-light: #f3f4f6;
+    --white: #fff;
+    --max-width: 1200px;
+}
+
+.nav {
+    position: fixed;
+    isolation: isolate;
+    top: 0;
+    left: 0;
+    width: min(1200px, 100%);
+    z-index: 10;
+
+    @include mq("768") {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+        margin-inline: auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        background: var(--primary-color);
+
+        @include mq("768") {
+            flex: 1;
+            gap: 1rem;
+            padding: 0;
+            background: transparent;
+        }
+    }
+
+    &__logo {
+        flex: 1;
+        .logo {
+            color: var(--white);
+
+            @include mq("768") {
+                color: var(--text-dark);
+            }
+        }
+    }
+
+    &__menu__btn {
+        font-size: 1.5rem;
+        color: var(--white);
+        cursor: pointer;
+
+        @include mq("768") {
+            display: none;
+        }
+
+        .icon {
+            display: block;
+        }
+    }
+
+    &__links {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        background: var(--primary-color);
+        padding: 2rem;
+        transition: 0.5s;
+        z-index: -1;
+
+        @include mq("768") {
+            position: static;
+            background: transparent;
+            flex-direction: row;
+            width: fit-content;
+            padding: 0;
+            transform: none in;
+            z-index: 0;
+
+            li:last-child {
+                display: none;
+            }
+        }
+
+        &.open {
+            translate: 0 100%;
+        }
+
+        a {
+            position: relative;
+            font-weight: 600;
+            color: var(--white);
+            white-space: nowrap;
+
+            @include mq("768") {
+                color: var(--text-dark);
+            }
+
+            &:hover {
+                color: var(--text-dark);
+
+                &::before {
+                    @include animation(lineAnimation, 0.3s);
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 1px;
+                background: var(--text-dark);
+            }
+        }
+    }
+
+    &__btns {
+        display: none;
+
+        @include mq("768") {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+
+            .btn {
+                padding: 0.75rem 2rem;
+                background: var(--text-dark);
+            }
+        }
+    }
+}
+
+@keyframes lineAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
