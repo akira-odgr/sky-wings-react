@@ -1,6 +1,8 @@
 import { Header } from "./components/header/Header";
 import { Nav } from "./components/nav/Nav";
-import { Discover } from "./components/discover/Discover";
+import { Destination } from "./components/destination/Destination";
+import { Journey } from "./components/journey/Journey";
+import { Showcase } from "./components/showcase/Showcase";
 import { Footer } from "./components/footer/Footer";
 
 import "./App.scss";
@@ -10,7 +12,9 @@ function App() {
         <>
             <Nav />
             <Header />
-            <Discover />
+            <Destination />
+            <Journey />
+            {/* <Showcase /> */}
             {/* <Footer /> */}
         </>
     );

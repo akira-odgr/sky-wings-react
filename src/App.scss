@@ -1,3 +1,5 @@
+@use "./globals/" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
@@ -43,7 +45,15 @@ ul {
     &__container {
         width: min(1200px, 100%);
         margin-inline: auto;
-        padding: 5rem 1rem;
+        padding: 3rem 1rem;
+
+        @include mq("540") {
+            padding: 4rem 1rem;
+        }
+
+        @include mq("768") {
+            padding: 5rem 1rem;
+        }
     }
 
     &__header {

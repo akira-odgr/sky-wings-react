@@ -48,6 +48,7 @@
         flex: 1;
         .logo {
             color: var(--white);
+            font-size: fluid-text(16px, 32px);
 
             @include mq("768") {
                 color: var(--text-dark);

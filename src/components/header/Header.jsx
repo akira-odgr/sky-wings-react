@@ -15,7 +15,9 @@ export const Header = () => {
         // ScrollRevealの初期化
         ScrollReveal().reveal(".header__image img", {
             ...scrollRevealOption,
-            origin: "right", // アニメーションが始まる位置
+            distance: "100px",
+            duration: 2000,
+            origin: "right",
         });
         ScrollReveal().reveal(".header__content p", {
             ...scrollRevealOption,
