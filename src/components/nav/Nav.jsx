@@ -6,6 +6,7 @@ import "./Nav.scss";
 export const Nav = () => {
     const [navLinks, setNavLinks] = useState("nav__links");
     const [menuIcon, setMenuIcon] = useState(<RiMenuLine className="icon" />);
+
     const toggleMenu = () => {
         setNavLinks((prevLinks) =>
             prevLinks === "nav__links" ? "nav__links open" : "nav__links"
@@ -18,6 +19,7 @@ export const Nav = () => {
             )
         );
     };
+
     return (
         <nav className="nav">
             <div className="nav__header">

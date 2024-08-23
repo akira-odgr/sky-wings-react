@@ -9,14 +9,19 @@
     --white: #fff;
 }
 
+.section__header {
+    font-size: fluid-text(24px, 48px) !important;
+}
+
 .journey {
     &__grid {
-        margin-top: 2rem;
         display: grid;
         gap: 0 1rem;
+        margin-top: 0.5rem;
 
         @include mq("540") {
             grid-template-columns: repeat(2, 1fr);
+            margin-top: 2rem;
         }
 
         @include mq("768") {

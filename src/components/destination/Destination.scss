@@ -10,10 +10,10 @@
 }
 
 .destination {
-    &__container :is(.section__header, .section__description) {
-        text-align: left;
-        margin-inline-start: unset;
-    }
+    // &__container :is(.section__header, .section__description) {
+    //     text-align: left;
+    //     margin-inline-start: unset;
+    // }
 
     &__grid {
         margin-top: 2rem;
