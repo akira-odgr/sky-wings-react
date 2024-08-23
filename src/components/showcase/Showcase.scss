@@ -51,8 +51,17 @@
             margin-bottom: 1rem;
             color: var(--text-light);
         }
+    }
+
+    &__btn {
+        width: min(600px, 100%);
+        margin-inline: auto;
 
         .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
             width: 100%;
             margin-top: 2rem;
             padding: 1.5rem;
@@ -60,7 +69,12 @@
             color: var(--text-dark);
             background: url("/images/header-bg.jpg") center center/cover
                 no-repeat;
-            border-radius: 5px;
+            border-radius: 1rem;
+
+            &:hover {
+                background: url("/images/header-bg.jpg") center center/cover
+                    no-repeat;
+            }
         }
     }
 }
