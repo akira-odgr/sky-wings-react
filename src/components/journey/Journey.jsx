@@ -15,11 +15,11 @@ export const Journey = () => {
                         return (
                             <div key={index} className="journey__card">
                                 <div className="journey__card__bg">
-                                    {icon}
+                                    <span>{icon}</span>
                                     <h4>{bgTitle}</h4>
                                 </div>
                                 <div className="journey__card__content">
-                                    {icon}
+                                    <span>{icon}</span>
                                     <h4>{contentTitle}</h4>
                                     <p>{contentDesc}</p>
                                 </div>

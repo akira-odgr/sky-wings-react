@@ -42,11 +42,18 @@
             border-top-left-radius: 1rem;
             border-top-right-radius: 1rem;
 
-            .icon {
-                display: inline-block;
+            span {
+                display: flex;
+                width: fit-content;
+                background: var(--white);
+                padding: 10px;
                 margin-bottom: 4rem;
-                font-size: 1.75rem;
-                color: var(--primary-color);
+                border-radius: 50%;
+                .icon {
+                    // display: inline-block;
+                    font-size: 1.75rem;
+                    color: var(--primary-color);
+                }
             }
 
             h4 {
@@ -72,10 +79,18 @@
                 top: 0;
             }
 
-            .icon {
+            span {
+                display: flex;
+                width: fit-content;
+                background: var(--white);
+                padding: 10px;
                 margin-bottom: 1rem;
-                font-size: 1rem;
-                color: var(--white);
+                border-radius: 50%;
+
+                .icon {
+                    font-size: 1.75rem;
+                    color: var(--primary-color);
+                }
             }
 
             h4 {

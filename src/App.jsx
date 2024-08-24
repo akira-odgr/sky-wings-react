@@ -21,7 +21,7 @@ function App() {
             <Banner />
             <Discover />
             <Client />
-            {/* <Footer /> */}
+            <Footer />
         </>
     );
 }

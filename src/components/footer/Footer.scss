@@ -1,0 +1,120 @@
+@use "../../globals/" as *;
+
+:root {
+    --primary-color: #2887ff;
+    --primary-color-dark: #2476da;
+    --text-dark: #0a0a0a;
+    --text-light: #737373;
+    --extra-light: #f3f4f6;
+    --white: #fff;
+}
+
+.footer {
+    background: var(--extra-light);
+
+    &__container {
+        display: grid;
+        gap: 4rem 2rem;
+
+        @include mq("540") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq("768") {
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        }
+    }
+
+    &__col {
+        &:last-child {
+            @include mq("540") {
+                grid-area: 2/1/3/2;
+            }
+
+            @include mq("768") {
+                grid-area: unset;
+            }
+        }
+        p {
+            width: fit-content;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        h4 {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+
+            input {
+                padding: 0.75rem;
+                font-size: 1rem;
+                color: var(--text-dark);
+                background: var(--white);
+                border: 1px solid var(--text-light);
+                border-radius: 5px;
+
+                &::placeholder {
+                    color: var(--text-light);
+                }
+            }
+
+            .btn {
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        a {
+            display: flex;
+            padding: 10px;
+            font-size: 1.25rem;
+            color: var(--white);
+            background: var(--primary-color);
+            border-radius: 50%;
+
+            &:hover {
+                background: var(--primary-color-dark);
+            }
+        }
+    }
+
+    &__links {
+        display: grid;
+        gap: 1rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+
+            &:hover {
+                color: var(--primary-color);
+            }
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    &__bar {
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: var(--text-light);
+        text-align: center;
+    }
+}
