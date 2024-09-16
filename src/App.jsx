@@ -5,10 +5,10 @@ import { Journey } from "./components/journey/Journey";
 import { Showcase } from "./components/showcase/Showcase";
 import { Banner } from "./components/banner/Banner";
 import { Discover } from "./components/discover/Discover";
+import { Client } from "./components/client/Client";
 import { Footer } from "./components/footer/Footer";
 
 import "./App.scss";
-import { Client } from "./components/client/Client";
 
 function App() {
     return (
